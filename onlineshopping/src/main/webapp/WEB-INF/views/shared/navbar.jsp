@@ -1,4 +1,4 @@
-<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+<nav class="navbar navbar-inverse" role="navigation">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -14,13 +14,13 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li id="about">
-                        <a href="${contextRoot }/about">About</a>
+                        <a href="${contextRoot}/about">About</a>
                     </li >
-                    <li id="listProducts">
-                        <a href="${contextRoot }/listProducts">View Products</a>
-                    </li>
                     <li id="contact">
-                        <a href="${contextRoot }/contact">Contact</a>
+                        <a href="${contextRoot}/contact">Contact</a>
+                    </li>
+                    <li id="listProducts">
+                        <a href="${contextRoot}/show/all/products">View Products</a>
                     </li>
                 </ul>
             </div>
