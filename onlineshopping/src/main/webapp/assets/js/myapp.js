@@ -12,6 +12,7 @@ $(function(){
 		
 	case 'All Products':
 		$('#listProducts').addClass('active');
+		
 		break;
 		
 	default:
