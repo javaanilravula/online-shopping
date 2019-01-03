@@ -1,25 +1,28 @@
 package anil.java.onlineshopping.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import javax.inject.Inject;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import anil.java.shoppingbackend.dao.CategoryDAO;
 import anil.java.shoppingbackend.dto.Category;
 
+
 @Controller
 public class PageController {
-	@Autowired
+	@Inject
+	private CategoryDAO categoryDao;
+	/*@Autowired
 	private CategoryDAO categoryDAO;
-	
+*/	
 	@RequestMapping(value = { "/", "/home", "/index" })
 	public ModelAndView index() {
 		ModelAndView mv = new ModelAndView("page");
 		mv.addObject("tittle", "Home");
-		mv.addObject("categories",categoryDAO.list());
+		mv.addObject("categories",categoryDao.list());
 		mv.addObject("userClickHome", true);
 		return mv;
 	}
@@ -44,7 +47,7 @@ public class PageController {
 		mv.addObject("title","All Products");
 		
 		//passing the list of categories
-		mv.addObject("categories", categoryDAO.list());
+		mv.addObject("categories", categoryDao.list());
 		
 		mv.addObject("userClickAllProducts",true);
 		return mv;				
@@ -54,9 +57,9 @@ public class PageController {
 	public ModelAndView showCategoryProducts(@PathVariable("id")int id) {
 		ModelAndView mv = new ModelAndView("page");
 		Category category=null;
-		category=categoryDAO.get(id);
+		category=categoryDao.get(id);
 		mv.addObject("tittle", category.getName());
-		mv.addObject("categories",categoryDAO.list());
+		mv.addObject("categories",categoryDao.list());
 		mv.addObject("category",category);
 		mv.addObject("userClickCategoryProducts", true);
 		return mv;
