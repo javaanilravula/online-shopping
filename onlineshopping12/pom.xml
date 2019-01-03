@@ -1,16 +1,19 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
+
   <groupId>anil.java</groupId>
-  <artifactId>onlineshopping11</artifactId>
-  <packaging>war</packaging>
+  <artifactId>onlineshopping12</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <name>onlineshopping11 Maven Webapp</name>
+  <packaging>jar</packaging>
+
+  <name>onlineshopping12</name>
   <url>http://maven.apache.org</url>
+
   <properties>
-		<javaee.version>7.0</javaee.version>
-		<spring.version>4.3.6.RELEASE</spring.version>
-	</properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -19,7 +22,4 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
-  <build>
-    <finalName>onlineshopping11</finalName>
-  </build>
 </project>
